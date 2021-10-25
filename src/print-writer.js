@@ -8,7 +8,9 @@ const printTable = (listOfSets, cronCommand) => {
   let row = [];
   Object.keys(definitions.fullFormat).forEach((position) => {
     row = [];
-    const tempArr = [...listOfSets[position]];
+    const tempArr = [...listOfSets[position]].sort((a, b) => {
+      return a - b;
+    });
     row.push(
       {
         content: colors.blue(definitions.fullFormat[position].name),

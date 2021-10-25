@@ -9,7 +9,7 @@
     "linter": "eslint --fix . "
   },
   "bin": {
-    "cron-parser-printer": "scripts/index.js"
+    "cron-parser-printer": "src/index.js"
   },
   "author": "Timothy Rawlins",
   "license": "ISC",

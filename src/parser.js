@@ -34,12 +34,6 @@ const parsePartCronEntity = (part, definition) => {
     // as the same value and then an interval of 1.
     return resultsGenerator.generateNumericalSet(min, min, 1);
   }
-  if (p.match(expressions.timeDigitWithInterval)) {
-    const min = parseInt(p, 10);
-    const partsArr = p.split('/');
-    const interval = parseInt(partsArr[1], 10);
-    return resultsGenerator.generateNumericalSet(min, defaultMax, interval);
-  }
   if (p.match(expressions.timeRange)) {
     // case when x-n then take range as minutes (x through n)
     // we assume that x < n but it could be the other way around as it is still a valid range

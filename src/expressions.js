@@ -9,16 +9,6 @@
 const timeDigit = /^\d{1,2}$/g;
 
 /**
- * Regex to match with a 1 or 1 digits
- * plus a numeric interval
- * Valid Examples:
- *  - 0/1
- *  - 3/10
- * @type {RegExp}
- */
-const timeDigitWithInterval = /^\d{1,2}\/[1-9]([0-9])?$/g;
-
-/**
  * Regex to match with a numeric range with
  * 1 or 2 digits on either side of the range
  * Valid Examples:
@@ -60,7 +50,6 @@ const wildCard = /^\*$/g;
 
 module.exports = {
   timeDigit,
-  timeDigitWithInterval,
   timeRange,
   timeRangeWithInterval,
   wildCardInterval,

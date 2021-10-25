@@ -22,25 +22,6 @@ describe('Test expressions => timeDigit', () => {
   });
 });
 
-describe('Test expressions => timeDigitWithInterval', () => {
-  beforeAll(() => {});
-  test('should return a match when n/k', async () => {
-    const expectedMatch = ['2/2'];
-    const input = '2/2';
-    expect(input.match(expressions.timeDigitWithInterval).toString()).toEqual(
-      expectedMatch.toString(),
-    );
-  });
-  test('should return null when n/', async () => {
-    const input = '4/';
-    expect(input.match(expressions.timeDigitWithInterval)).toBeNull();
-  });
-  test('should return null when n/0', async () => {
-    const input = '4/0';
-    expect(input.match(expressions.timeDigitWithInterval)).toBeNull();
-  });
-});
-
 describe('Test expressions => timeRange', () => {
   beforeAll(() => {});
   test('should return a match when n-k', async () => {
